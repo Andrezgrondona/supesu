@@ -1,4 +1,6 @@
-body{
+
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');body{
     margin: 0;
     padding: 0;
 }
@@ -25,8 +27,14 @@ body{
   align-content:center;
   padding: 20px;
   list-style: none;
+  font-family: Righteous;
 }
 
 .link{
     padding: 30px;
+}
+
+.logo{
+    font-family: Righteous;
+    font-size: 30px;
 }
