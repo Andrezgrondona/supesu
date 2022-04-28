@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: gray;
+    height: 100px;
+    width: auto;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    align-content:center;
+    
+}
+
+.links{
+    display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  align-items:center;
+  align-content:center;
+  padding: 20px;
+  list-style: none;
+}
+
+.link{
+    padding: 30px;
+}
