@@ -1,7 +1,6 @@
 import Carticon from "../Carticon/Carticon";
 
 export default function Navbar ({category1,category2,category3}){
-
     const marginLogo = {
         margin: "20px"   
     }
