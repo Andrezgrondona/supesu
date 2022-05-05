@@ -1,5 +1,9 @@
 import Carticon from "../Carticon/Carticon";
 
+/* modo prueba Desafío: Contador con botón */
+import ItemCount from "../ItemCount/ItemCount";
+/* modo prueba Desafío: Contador con botón */
+
 export default function Navbar ({category1,category2,category3}){
     const marginLogo = {
         margin: "20px"   
@@ -18,7 +22,8 @@ export default function Navbar ({category1,category2,category3}){
                 <li className="nav-item">
                     <a className="link" href="#">{category3}</a>
                 </li>
-                <Carticon count={10} />
+                <Carticon/>
+                <ItemCount/>
             </ul>
             
         </header>
