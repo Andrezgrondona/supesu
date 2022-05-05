@@ -40,3 +40,19 @@
     font-family: Righteous;
     font-size: 30px;
 }
+
+.BannerHeader{
+    font-family: Righteous;
+    font-size: 40px;
+    background-color: rgb(241, 238, 239);
+    color: rgb(66, 61, 61);
+    width: auto;
+    height: 120px;
+
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    align-content:center;
+}
