@@ -1,4 +1,4 @@
- /* ----------------COMPONENTE DE CLASE---------------- */
+/* --------------------------- COMPONENTE DE CLASE -------------------------- */
  
  /* import React from "react"
     export default class ItemListContainer extends React.Component{
@@ -9,25 +9,27 @@
     }
 }  */
 
-/* ----------------COMPONENTE DE CLASE---------------- */
+/* --------------------------- COMPONENTE DE CLASE -------------------------- */
 
 
-/* ----------------COMPONENTE DE FUNCIONAL---------------- */
+/* ------------------------- COMPONENTE DE FUNCIONAL ------------------------ */
 
 import React from "react"
 
-export default function ItemListContainer (){
-  const [text, setText] = React.useState("CREACIÓN DE ESPACIOS EXTRAORDINARIOS")
+export default function ItemListContainer ({greeting}){
+  
     return(
-        <div className="BannerHeader"> {text}</div>          
+        <div className="BannerHeader"> {greeting}</div>          
     );
 }
+ 
+/* ------------------------- COMPONENTE DE FUNCIONAL ------------------------ */
+ 
+ 
 
-/* ----------------COMPONENTE DE FUNCIONAL---------------- */
- 
- 
- 
- 
+
+
+
  
 
 
