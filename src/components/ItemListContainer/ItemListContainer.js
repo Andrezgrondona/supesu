@@ -1,10 +1,12 @@
 import React from "react"
 
-export default class ItemListContainer extends React.Component{
-    render(){
+export default function ItemListContainer (){
+    render();{
         return(
             <div className="BannerHeader"> {this.props.greeting}</div>  
         )
         
     }
 }
+
+
