@@ -1,4 +1,4 @@
-import Carticon from "../Carticon/Carticon";
+import CartIcon from "../Carticon/CartIcon";
 
 /* modo prueba Desafío: Contador con botón */
 import ItemCount from "../ItemCount/ItemCount";
@@ -22,7 +22,7 @@ export default function Navbar ({category1,category2,category3}){
                 <li className="nav-item">
                     <a className="link" href="#">{category3}</a>
                 </li>
-                <Carticon/>
+                <CartIcon/>
                 <ItemCount/>
             </ul>
             

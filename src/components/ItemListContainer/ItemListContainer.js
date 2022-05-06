@@ -1,7 +1,7 @@
 import React from "react"
 
-export default function ItemListContainer (){
-    render();{
+export default class ItemListContainer extends React.Component{
+    render(){
         return(
             <div className="BannerHeader"> {this.props.greeting}</div>  
         )
@@ -10,3 +10,15 @@ export default function ItemListContainer (){
 }
 
 
+
+
+/* import React from "react"
+
+
+export default function ItemListContainer (){
+    const [] = React.useState(BannerHeader)
+        return(
+            <div className="BannerHeader"> {this.props.greeting}</div>  
+        )    
+
+}  */

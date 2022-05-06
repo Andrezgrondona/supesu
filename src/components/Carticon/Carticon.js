@@ -1,4 +1,4 @@
-export default function Carticon ({count}){
+export default function CartIcon({count}){
 
     const cartSize = {   
         width: "50px"  
