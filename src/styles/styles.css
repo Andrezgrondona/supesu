@@ -5,6 +5,8 @@
     padding: 0;
 }
 
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 .header{
     background-color: gray;
     height: 100px;

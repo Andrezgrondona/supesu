@@ -8,28 +8,33 @@
         )  
     }
 }  */
-
 /* --------------------------- COMPONENTE DE CLASE -------------------------- */
 
 
 /* ------------------------- COMPONENTE DE FUNCIONAL ------------------------ */
+import Itemlist from "../ItemList/ItemList";
 
 import React from "react"
+import { Container, Row } from "react-bootstrap";
 
 export default function ItemListContainer ({greeting}){
   
     return(
-        <div className="BannerHeader"> {greeting}</div>          
+        <>
+        <div className="BannerHeader"> {greeting}</div>  
+        
+        <Container>
+            <Row>
+                <Itemlist/>
+                <Itemlist/>
+                <Itemlist/>
+                <Itemlist/>
+            </Row>
+            
+        </Container>
+        </>
     );
 }
  
 /* ------------------------- COMPONENTE DE FUNCIONAL ------------------------ */
- 
- 
-
-
-
-
- 
-
 

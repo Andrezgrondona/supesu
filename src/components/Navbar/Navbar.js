@@ -25,6 +25,8 @@ export default function Navbar ({category1,category2,category3}){
                 <CartIcon/>
                 <ItemCount/>
             </ul>
+
+
             
         </header>
     );
