@@ -18,7 +18,7 @@ function App() {
     <> 
 
     <div className="App">
-     <Navbar category1={"Inicio"} category2={"Productos"} category3={"Contacto"}/>
+     {/* <Navbar category1={"Inicio"} category2={"Productos"} category3={"Contacto"}/> */}
      <NavbarBoostrap />
      <ItemListContainer greeting={"CREACIÓN DE ESPACIOS EXTRAORDINARIOS"} greeting2={"A LA MEDIDA DE TUS NECESIDADES"}/>
      {/* <Itemlist /> */}

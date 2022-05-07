@@ -21,7 +21,11 @@ export default function ItemListContainer ({greeting}){
   
     return(
         <>
-        <div className="BannerHeader"> {greeting}</div>  
+         <Container>
+            <row>
+            <div className="BannerHeader"> {greeting}</div>  
+            </row>
+        </Container>
         
         <Container>
             <Row>
@@ -29,9 +33,9 @@ export default function ItemListContainer ({greeting}){
                 <Itemlist/>
                 <Itemlist/>
                 <Itemlist/>
-            </Row>
-            
+            </Row> 
         </Container>
+       
         </>
     );
 }
