@@ -16,6 +16,7 @@ import Itemlist from "../ItemList/ItemList";
 
 import React from "react"
 import { Container, Row } from "react-bootstrap";
+import AddButton from "../AddButton/AddButton";
 
 export default function ItemListContainer ({greeting}){
   
@@ -35,6 +36,10 @@ export default function ItemListContainer ({greeting}){
                 <Itemlist/>
             </Row> 
         </Container>
+        <div className="ItemListContainer">
+            <AddButton/>
+
+        </div>
        
         </>
     );
