@@ -1,6 +1,4 @@
 import React from "react"
-
-
 export default function AddButton (){
     const [count, setCount] = React.useState(1)
     const stock = 5

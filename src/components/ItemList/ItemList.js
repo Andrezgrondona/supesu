@@ -1,21 +1,25 @@
-/* ------------------------------ Boostrap card ----------------------------- */
+import React from "react";
+import Item from "../Item/Item";
 
-import { Card, Button } from "react-bootstrap"
-import AddButton from "../AddButton/AddButton"
-export default function Itemlist (){
-  
+
+
+const ItemList =({listaProductos}) =>{
     return(
-        <Card style={{ width: '15rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-            <Card.Title>Card de prueba</Card.Title>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
-            <AddButton/>
-        </Card.Body>
-        </Card>
-    )
+        <div>
+            <>
+                <h3>Lista de productos</h3>
 
+                <div style={{display:'flex', justifyContent:'space-between',flexWrap:'wrap',alignItems:'center'}}>
+                {listaProductos.map((producto)=> <Item producto={producto} key={producto.id}/>)}
+                {/* producto es generico */}
+                </div>
+                
+        
+            </>
+            
+            
+        </div>
+    )
 }
+
+export default ItemList

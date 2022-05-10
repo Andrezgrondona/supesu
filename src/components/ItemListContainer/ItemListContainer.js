@@ -1,49 +1,53 @@
-/* --------------------------- COMPONENTE DE CLASE -------------------------- */
+
+/* -------------------------------- promesas -------------------------------- */
+   
+import React, { useEffect, useState } from "react"
+import Item from "../Item/Item"
+import {Article} from "../../data/Productos"
+import ItemList from "../ItemList/ItemList"
+
+
+const Listado = ({saludo}) => {
+ const [listaProductos, setListaProductos]=useState([])
+ const [cargando, setCargando] = useState(false)
+
+
+ const traerProd = new Promise ((resolve, reject)=>{
+     let condition = true
+     setTimeout(()=>{
+         if (condition){
+             resolve(Article)
+         }else{
+             reject('salio mal ')
+         }
+
+     },3000)
+ })
+
+ useEffect(()=>{
+     
+     setCargando(true)
+     traerProd
+     .then((res)=> setListaProductos(res))
+     .catch((error)=>console.log(error))
+     .finally(()=> setCargando(false))
+
+ },[])
+
  
- /* import React from "react"
-    export default class ItemListContainer extends React.Component{
-    render(){
-        return(
-            <div className="BannerHeader"> {this.props.greeting}</div>  
-        )  
-    }
-}  */
-/* --------------------------- COMPONENTE DE CLASE -------------------------- */
 
-
-/* ------------------------- COMPONENTE DE FUNCIONAL ------------------------ */
-import Itemlist from "../ItemList/ItemList";
-
-import React from "react"
-import { Container, Row } from "react-bootstrap";
-import AddButton from "../AddButton/AddButton";
-
-export default function ItemListContainer ({greeting}){
-  
     return(
-        <>
-         <Container>
-            <row>
-            <div className="BannerHeader"> {greeting}</div>  
-            </row>
-        </Container>
-        
-        <Container>
-            <Row>
-                <Itemlist/>
-                <Itemlist/>
-                <Itemlist/>
-                <Itemlist/>
-            </Row> 
-        </Container>
-        <div className="ItemListContainer">
-            <AddButton/>
-
+        <div>
+            <h1>{saludo}</h1>
+            {cargando ? <p>cargando...</p> : <ItemList listaProductos={listaProductos}/>}
+            {/* rendering condicional */}
+            
         </div>
-       
-        </>
-    );
+     
+    )
 }
- 
-/* ------------------------- COMPONENTE DE FUNCIONAL ------------------------ */
 
+export default Listado
+
+   
+      
