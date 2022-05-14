@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import Item from "../Item/Item";
 
 
@@ -11,7 +11,7 @@ const ItemList =({listaProductos}) =>{
 
                 <div style={{display:'flex', justifyContent:'space-between',flexWrap:'wrap',alignItems:'center'}}>
                 {listaProductos.map((producto)=> <Item producto={producto} key={producto.id}/>)}
-                {/* producto es generico */}
+                {/* producto es generico  */}
                 </div>
                 
         
@@ -23,3 +23,5 @@ const ItemList =({listaProductos}) =>{
 }
 
 export default ItemList
+ 
+

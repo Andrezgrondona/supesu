@@ -5,6 +5,10 @@ import ItemCount from "./components/ItemCount/ItemCount";
 import NavbarBoostrap from "./components/NavbarBoostrap/NavbarBoostrap";
 import Item from "./components/Item/Item";
 import ItemList from "./components/ItemList/ItemList"
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import ItemDetail from "./components/ItemDetail/ItemDetail";
+
+
 
 
 
@@ -21,6 +25,8 @@ function App() {
         <NavbarBoostrap />
         
         <ItemListContainer/>
+        <ItemDetailContainer/>
+        <ItemDetail/>
     </div>
     </> 
   );

@@ -23,7 +23,7 @@ const Listado = ({saludo}) => {
 
      },3000)
  })
-
+/* console.log(listaProductos) */
  useEffect(()=>{
      
      setCargando(true)
