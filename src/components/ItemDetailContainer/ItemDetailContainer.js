@@ -33,6 +33,8 @@
 
   import axios from "axios"
  import React from 'react'
+ import { Card} from "react-bootstrap"
+ import ItemCount from "../ItemCount/ItemCount"
  
  
  const ItemDetailContainer = () => {
@@ -49,8 +51,23 @@
    console.log(hogar)
    return (
         <div>
-          prueba de impresion: 
-        {hogar.title}
+          <Card style={{ width: '15rem' }}>
+            <Card.Img  variant="top" />
+            <Card.Body>
+                <Card.Title>{hogar.title}</Card.Title>
+                
+                <Card.Text>
+                Some quick example text to build on the card title and make up the bulk of
+                the card's content.
+                </Card.Text>
+                <ItemCount /> 
+                
+                
+                
+            </Card.Body>
+          </Card>
+
+          
        </div>
    )
  }
@@ -59,6 +76,8 @@
 
   /* ---------------------------------- AXIOS --------------------------------- */
 
- 
+  
 
 
+/* prueba de impresion: 
+        {hogar.title} */
