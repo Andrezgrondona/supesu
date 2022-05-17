@@ -4,27 +4,31 @@ export const Article =[
         title:"mesa",
         stock: 5,
         price:300,
-        image:"img/mesa.jpeg"
+        image:"img/mesa.jpeg",
+        category_id: 1,
     },
     {
         id:2,
         title:"lampara",
         stock: 10,
         price:500,
-        image:"img/lampara.jpeg"
+        image:"img/lampara.jpeg",
+        category_id: 1,
     },
     {
         id:3,
         title:"reloj",
         stock: 20,
         price:450,
-        image:"img/reloj.jpeg"
+        image:"img/reloj.jpeg",
+        category_id: 2,
     },
     {
         id:4,
         title:"Maceta",
         stock: 12,
         price:50,
-        image:"img/maceta.jpeg"
+        image:"img/maceta.jpeg",
+        category_id: 2,
     },
 ]

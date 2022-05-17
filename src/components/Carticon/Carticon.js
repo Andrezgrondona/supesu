@@ -2,6 +2,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {  faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom"
 
 
 export default function CartIcon(){
@@ -11,7 +12,9 @@ export default function CartIcon(){
     }
     return(
         <div className="cardWidget">
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <Link to="/cart">
+                <FontAwesomeIcon icon={faShoppingCart} />   
+            </Link>
         </div>
     )
 }

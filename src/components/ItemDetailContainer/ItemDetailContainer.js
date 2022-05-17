@@ -31,7 +31,7 @@
 
  /* ---------------------------------- AXIOS --------------------------------- */
 
-  import axios from "axios"
+  /* import axios from "axios"
  import React from 'react'
  import { Card} from "react-bootstrap"
  import ItemCount from "../ItemCount/ItemCount"
@@ -72,12 +72,34 @@
    )
  }
  
- export default ItemDetailContainer 
+ export default ItemDetailContainer  */
 
   /* ---------------------------------- AXIOS --------------------------------- */
 
   
+import React from 'react'
+import ItemList from '../ItemList/ItemList'
+import {Container, Row, Col} from "react-bootstrap"
+import {Articles} from "../../data/Productos"
+import ItemDetail from '../ItemDetail/ItemDetail'
+
+function ItemDetailContainer({title}) {
+  return (
+    <Container className="itemlist-container">
+      <Row>
+        <Col>
+          <h1>{title}</h1>
+        </Col>
+      </Row>
+      <Row>
+        <ItemDetail/>
+      </Row>
 
 
-/* prueba de impresion: 
-        {hogar.title} */
+    </Container>
+    
+  )
+}
+
+export default ItemDetailContainer
+
