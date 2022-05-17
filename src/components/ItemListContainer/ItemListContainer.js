@@ -12,12 +12,12 @@ import Products from "../../views/Products/Products"
 
 function ItemListContainer ({saludo, categoryId}) {
 
- const [listaProductos, setListaProductos]=useState([])
+ const [listaProductos, setListaProductos]=React.useState([])
  const [cargando, setCargando] = useState(false)
 
  React.useEffect(()=>{
      if(categoryId){
-        listaProductos=(Article.filter(Art_filtrados => Art_filtrados.category_id === +categoryId)) 
+        listaProductos(Article.filter(Art_filtrados => Art_filtrados.category_id === +categoryId)) 
      }
      else{
         setListaProductos(Article)
@@ -79,6 +79,7 @@ function ItemListContainer ({saludo}) {
  const [cargando, setCargando] = useState(false)
 
  React.useEffect(()=>{
+   
     //setListaProductos(Article.filter(item => item.category_id===+categoryId)) 
  },[categoryId])
 
