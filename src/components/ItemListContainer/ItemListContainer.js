@@ -17,7 +17,7 @@ function ItemListContainer ({saludo, categoryId}) {
 
  React.useEffect(()=>{
      if(categoryId){
-        listaProductos(Article.filter(Art_filtrados => Art_filtrados.category_id === +categoryId)) 
+        listaProductos(Article.filter(listaProductos => listaProductos.category_id === +categoryId)) 
      }
      else{
         setListaProductos(Article)

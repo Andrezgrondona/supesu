@@ -80,10 +80,14 @@
 import React from 'react'
 import ItemList from '../ItemList/ItemList'
 import {Container, Row, Col} from "react-bootstrap"
-import {Articles} from "../../data/Productos"
+import {Article} from "../../data/Productos"
 import ItemDetail from '../ItemDetail/ItemDetail'
 
-function ItemDetailContainer({title}) {
+function ItemDetailContainer({title, productId}) {
+  const [listaProductos, setListaProductos] = React.useState({})
+  React.useEffect(()=>{
+    setListaProductos(Article.find(listaProductos=>listaProductos.id===productId))
+  }, [productId])
   return (
     <Container className="itemlist-container">
       <Row>
@@ -92,7 +96,7 @@ function ItemDetailContainer({title}) {
         </Col>
       </Row>
       <Row>
-        <ItemDetail/>
+        <ItemDetail listaProductos ={listaProductos}/>
       </Row>
 
 

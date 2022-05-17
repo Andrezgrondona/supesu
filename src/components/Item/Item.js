@@ -1,14 +1,17 @@
 import AddButton from "../AddButton/AddButton"
 import ItemCount from "../ItemCount/ItemCount"
-
+import { Link, useNavigate } from "react-router-dom"
 
 import { Card} from "react-bootstrap"
 
 export default function Item ({producto}){
+    const navigate = useNavigate()
+
     
 
     return(
-        <Card style={{ width: '15rem' }}>
+    
+        <Card style={{ width: '15rem' }} onClick={()=>navigate(`/product/${producto.id}`)}>
         <Card.Img src={producto.image} variant="top" />
         <Card.Body>
             <Card.Title>{producto.title}</Card.Title>
@@ -22,6 +25,7 @@ export default function Item ({producto}){
             
         </Card.Body>
         </Card>
+    
 
     )
 }
