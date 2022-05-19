@@ -5,9 +5,9 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 function Home() {
   return (
     <div className='AppRoute'>
-        <NavbarBoostrap />
-        <h1>hola mundo</h1>
-        <ItemListContainer title="Nuestros productos"/> 
+      <NavbarBoostrap/>
+        
+        <ItemListContainer title="Lo mejor para tus espacios!"/> 
         
     </div>
   )
