@@ -6,8 +6,6 @@ const ItemCount =({stock}) => {
         if(counter < stock){
             setCounter(counter +1)
         }
-        
-
     }
 
     const restar =() => {

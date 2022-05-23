@@ -1,41 +1,37 @@
 import React from "react"
-export default function AddButton (){
-    const [count, setCount] = React.useState(1)
-    const stock = 5
 
-    const onAdd = () => {
-        if(count<stock){
-        setCount(count +1)
-     }
+import { Button } from "react-bootstrap"
+
+
+export default function AddButton({count, setCount, stock, onSubmit}) {
+  const onAdd = () => {
+    if(count < stock) {
+      setCount(count + 1)
     }
+  }
 
-    const handleRest = () => {
-        if (count > 0){
-            setCount (count -1)
-        }
+  const onDecrease = () => {
+    if(count > 1) {
+      setCount(count - 1)
     }
+  }
+  
+  const StockButton = ({ handleOnClick, text }) => {
+    return <Button className="stock-button" onClick={() => handleOnClick()}>{text}</Button>;
+  };
+ 
+  const AddButton = ({handleOnSubmit}) => {
+    return <Button className="btn add-button" onClick={() => handleOnSubmit()}>Añadir al carrito</Button>;
+  };
 
-    const StockButton = ({handleOnclick, text})=>{
-        return(
-         <button className="stock-button" onClick={handleOnclick}>{text} </button>)
-        }
-
-        const AddButton = () => {
-            return (
-                <button className="add-button">
-                    Añadir al carrrito
-                </button>
-            )
-        }
-
-
-    return(
-        <div className="add-button-container">
-            <StockButton text="+" handleOnclick={onAdd}/>
-            <span className="add-button-count">{count}</span>
-            <StockButton text="-" handleOnclick={handleRest}/>
-            <StockButton text="Añadir al carrito" handleOnclick={AddButton}/>
-        </div>
-    )
-
+  return (
+    <div className="add-button-container">
+      <StockButton text="-" handleOnClick={onDecrease}/>
+      <span className="add-button-count">{count}</span>
+      <StockButton text="+" handleOnClick={onAdd}/>
+      <AddButton handleOnSubmit={onSubmit} />
+    </div>
+  );
 }
+
+

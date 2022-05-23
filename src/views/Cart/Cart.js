@@ -6,7 +6,7 @@ function Cart() {
       
     <div>
         <NavbarBoostrap/>
-        Cart
+        productos en el carrito
         </div>
   )
 }

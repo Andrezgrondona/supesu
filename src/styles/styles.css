@@ -58,3 +58,17 @@
     align-items:center;
     align-content:center;
 }
+
+.badge{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 10px;
+}
+
+/* ----------------------------- imagen detalle ----------------------------- */

@@ -1,15 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-
 import Home from "./views/Home/Home"
 import Cart from "./views/Cart/Cart"
 import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
+import styles from "../src/styles/styles.css"
+/* --------------------------------- Context -------------------------------- */
+import{CartProvider} from "./context/CartContext"
+/* --------------------------------- Context -------------------------------- */
 
 
 function App() {
   return (
       <BrowserRouter>
+      <CartProvider>
         <Routes>
           <Route exact path="*" element={<Home />} />
           <Route exact path="/products" element={<Products />} />
@@ -17,6 +21,7 @@ function App() {
           <Route exact path="/category/:categoryId" element={<Category />} />
           <Route exact path="/cart" element={<Cart />} />
         </Routes>
+      </CartProvider>
       </BrowserRouter>
   );
 }
