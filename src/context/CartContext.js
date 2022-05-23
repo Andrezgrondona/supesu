@@ -49,13 +49,6 @@ const CartProvider = ({children}) => {
     } */
 
                  /* ------------- SACAR ITEM POR ITEM ----------- */
-
-
-
-
-
-
-
   /* --------------------------------- Borrar --------------------------------- */
   const deleteAll = () => {
     setCart([])
