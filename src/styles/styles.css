@@ -8,10 +8,11 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(211, 211, 219);
 }
 
 .bg-light{
-    background-color: rgb(145, 124, 110) !important;  
+    background-color: rgb(226, 200, 182) !important;  
 }
 
 .active{
@@ -27,22 +28,20 @@ body{
     justify-content: center;
     align-content: center;
     align-items: center;
-    background-color: red;
+    background-color: rgb(129, 129, 129);
     border-radius: 10px;
 }
 /* -------------------------- CONTADOR DEL CARRITO -------------------------- */
 /* ---------------------------------- HOME ---------------------------------- */
-.fondoBaner{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-    align-content:center;
-    background-color: rgb(55, 49, 59);
-}
+#basic-navbar-nav{
+    color: red;
+    font-size: 15px;
+    font-family: Lexend+Deca;
+    }
+
 .bannerUno{
-    width: 1140px;
+    width:  auto;
+    height: 442px;
 }
 
 .txtBaner{
@@ -54,7 +53,7 @@ body{
 /* ---------------------------------- HOME ---------------------------------- */
 /* ----------------------------- CUADRICULA GRID ---------------------------- */
 .parent {
-    margin-top: 50px;
+    margin-top: 25px;
     width: auto;
     height: 500px;
     background-color: none;
@@ -99,10 +98,45 @@ body{
     } 
 /* ----------------------------- CUADRICULA GRID ---------------------------- */
 
-/* -------------------------------- BABY BED -------------------------------- */
-.babyBed{
-    width: auto;
-    height: 200px;
-    background-color: pink;
+/* --------------------------------     Alert -------------------------------- */
+
+.fade{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-end;
+    align-content:center;
+    text-align: center;
+    margin-top: 20px;
+    color: #353937;
+    background-color: #c4a393;
+    border-color: #a9aaaa;
 }
-/* -------------------------------- BABY BED -------------------------------- */
+
+.txt_succes{
+    
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(214, 93, 23);
+    font-size: 30px;
+}
+/* -------------------------------- Alert -------------------------------- */
+
+.mb-3{
+    font-size: 20px;
+    background-color: rgb(233, 110, 53);
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 15px;
+  
+}
+
+.form-control{
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+
+    
+}
