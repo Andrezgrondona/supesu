@@ -1,64 +1,24 @@
 
+/* --------------------------------- FUENTES --------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap');
+/* --------------------------------- FUENTES -------------------------------- */
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');body{
+body{
     margin: 0;
     padding: 0;
 }
 
-@import 'bootstrap/dist/css/bootstrap.min.css';
-
-.header{
-    background-color: gray;
-    height: 100px;
-    width: auto;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:center;
-    align-content:center;
-    
+.bg-light{
+    background-color: rgb(145, 124, 110) !important;  
 }
 
-.links{
-    display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  justify-content:space-around;
-  align-items:center;
-  align-content:center;
-  padding: 20px;
-  list-style: none;
-  font-family: Righteous;
+.active{
+    color: rgb(148, 145, 145);
 }
 
-.link{
-    padding: 30px;
-    color: black;
-    font-size: 17px;
-}
-
-.logo{
-    font-family: Righteous;
-    font-size: 30px;
-}
-
-.BannerHeader{
-    font-family: Righteous;
-    font-size: 40px;
-    background-color: rgb(241, 238, 239);
-    color: rgb(66, 61, 61);
-    width: auto;
-    height: 120px;
-
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    align-items:center;
-    align-content:center;
-}
-
+/* -------------------------- CONTADOR DEL CARRITO -------------------------- */
 .badge{
     width: 20px;
     height: 20px;
@@ -70,5 +30,79 @@
     background-color: red;
     border-radius: 10px;
 }
+/* -------------------------- CONTADOR DEL CARRITO -------------------------- */
+/* ---------------------------------- HOME ---------------------------------- */
+.fondoBaner{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    background-color: rgb(55, 49, 59);
+}
+.bannerUno{
+    width: 1140px;
+}
 
-/* ----------------------------- imagen detalle ----------------------------- */
+.txtBaner{
+    width: 380px;
+    height: 200px;
+    background-color: red;
+}
+
+/* ---------------------------------- HOME ---------------------------------- */
+/* ----------------------------- CUADRICULA GRID ---------------------------- */
+.parent {
+    margin-top: 50px;
+    width: auto;
+    height: 500px;
+    background-color: none;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 6 / 4;
+        width: auto;
+        height: auto;
+        background-image: url("./../assets/images/office.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .div2 { grid-area: 1 / 4 / 4 / 8; 
+        width: auto;
+        height: auto;
+        background-image: url("./../assets/images/kitchen.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .div3 { grid-area: 4 / 4 / 6 / 8; 
+        width: auto;
+        height: auto;
+        background-image: url("./../assets/images/baner.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .div4 { grid-area: 1 / 8 / 6 / 11;
+        width: auto;
+        height: auto;
+        background-image: url("./../assets/images/comedor.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+/* ----------------------------- CUADRICULA GRID ---------------------------- */
+
+/* -------------------------------- BABY BED -------------------------------- */
+.babyBed{
+    width: auto;
+    height: 200px;
+    background-color: pink;
+}
+/* -------------------------------- BABY BED -------------------------------- */
