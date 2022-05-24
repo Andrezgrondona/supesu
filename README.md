@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+Supēsu
+
+Es un proyecto enfocado hacia la tendencia de la decoracion en hogares & oficinas, aplicando los conceptos modernos y vanguardistas para lograr el equilibrio en las tendencias de mobiliario y decoracion.
+
+Los productos que podemos encontar en Supēsu son:
+lamparas, Dormitorio, hogar, mobiliario decorativos para oficina.
+
+La idea es crear un E-commerce, el enfoque es enfocado a vender y mostrar nuestros productos online.
