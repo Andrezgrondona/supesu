@@ -1,10 +1,13 @@
-
-
+import ListadoN from "../ListadoN/ListadoN";
+import NavBarList from "../NavBarList/NavBarList";
 /* ------------------------------------ NavbarBoostrap ----------------------------------- */
 import CartIcon from "../Carticon/CartIcon"
 import {Navbar, Container, Nav} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom"
-export default function NavbarBoostrap () {
+
+
+
+export default function NavbarBoostrap ({props}) {
   return (
     <header>
       <Navbar bg="light" expand="lg">
@@ -35,12 +38,20 @@ export default function NavbarBoostrap () {
                   Decoracion
                 </NavLink>
               </Nav.Link>
+              <Nav.Link>
+                <NavLink to="/category/2">
+
+                   <NavBarList/>
+
+                </NavLink>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          <CartIcon />
+          <CartIcon /> 
         </Container>
       </Navbar>
     </header>
   );
 }
 
+/* lista N44 item importado lista filtrada */

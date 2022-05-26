@@ -1,7 +1,8 @@
 import React from 'react'
 import NavbarBoostrap from "../../components/NavbarBoostrap/NavbarBoostrap";
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
-import{Container, Col, Row, Alert, Button, Form} from 'react-bootstrap'
+import{Container, Col, Row, Alert, Button, Form, Nav} from 'react-bootstrap'
+import { Link, NavLink } from "react-router-dom"
 
 
 import banner from '../../assets/images/baner4.jpeg'
@@ -10,7 +11,7 @@ import baby from '../../assets/images/bebes.jpeg'
 function Home() {
   return (
     <div className='AppRoute'>
-      <NavbarBoostrap/>
+     
 
       <Container>
         <div>
@@ -39,10 +40,17 @@ function Home() {
 
       <Container>
         <div className='txt_succes'>
-        <Button variant="link">Ver productos!</Button>
+        <Nav.Link>
+            <NavLink className="ver_productos " to="/category/1">Ver productos</NavLink>
+        </Nav.Link>
           <hr /> 
         </div>
       </Container> 
+
+      
+      
+
+
 
       <Container>
           <Form>

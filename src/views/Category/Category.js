@@ -8,7 +8,7 @@ function Category() {
   console.log(categoryId)
   return (
     <div>
-        <NavbarBoostrap/>
+        
         <h1>LIstado category</h1>
         <ItemListContainer categoryId={categoryId}/>
     </div>

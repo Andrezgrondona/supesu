@@ -9,7 +9,7 @@ export default function Product ({}) {
     <Container>
       <Row>
         <Col>
-          <NavbarBoostrap/>
+          
           <ItemDetailContainer title="Mi producto" productId={+productId}/>
         </Col>
       </Row>

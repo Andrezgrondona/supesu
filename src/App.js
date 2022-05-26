@@ -5,8 +5,10 @@ import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
 import styles from "../src/styles/styles.css"
+
 /* --------------------------------- Context -------------------------------- */
 import{CartProvider} from "./context/CartContext"
+import NavbarBoostrap from "./components/NavbarBoostrap/NavbarBoostrap"
 /* --------------------------------- Context -------------------------------- */
 
 
@@ -14,6 +16,7 @@ function App() {
   return (
       <BrowserRouter>
       <CartProvider>
+        <NavbarBoostrap/>
         <Routes>
           <Route exact path="*" element={<Home />} />
           <Route exact path="/products" element={<Products />} />
