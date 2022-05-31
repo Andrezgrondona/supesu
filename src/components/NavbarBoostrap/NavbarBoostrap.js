@@ -18,6 +18,42 @@ export default function NavbarBoostrap ({props}) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+
+              
+                <NavBarList />
+              
+
+            </Nav>
+          </Navbar.Collapse>
+          <CartIcon /> 
+        </Container>
+      </Navbar>
+    </header>
+  );
+}
+
+/* -------------------------------- prueba 1 -------------------------------- */
+
+/* import ListadoN from "../ListadoN/ListadoN";
+import NavBarList from "../NavBarList/NavBarList";
+
+import CartIcon from "../Carticon/CartIcon"
+import {Navbar, Container, Nav} from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom"
+
+
+
+export default function NavbarBoostrap ({props}) {
+  return (
+    <header>
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand>
+            <Link to="/" >Supēsu</Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
               <Nav.Link>
                 <NavLink to="/">
                   Inicio
@@ -52,6 +88,5 @@ export default function NavbarBoostrap ({props}) {
       </Navbar>
     </header>
   );
-}
+} */
 
-/* lista N44 item importado lista filtrada */

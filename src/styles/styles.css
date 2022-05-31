@@ -19,6 +19,22 @@ body{
     color: rgb(148, 145, 145);
 }
 
+
+/* --------------------------------- NAVBAR --------------------------------- */
+.basic-navbar-nav{
+    background-color: blue;
+    width: 1000px;
+    height: 100px;
+    font-size: 15px;
+    display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  align-content:center;
+}
+/* --------------------------------- NAVBAR --------------------------------- */
+
 /* -------------------------- CONTADOR DEL CARRITO -------------------------- */
 .badge{
     width: 20px;
