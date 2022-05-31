@@ -9,22 +9,29 @@ const NavBarList = () => {
         {
             id:1,
             name:'Supēsu',
-            productos:"productos",
-            muebles:"muebles",
-            decoracion:"Decoracion"
         }, 
+        {
+            id:2,
+            name:'productos',
+        }, 
+        {
+            id:3,
+            name:'muebles',
+        }, 
+        {
+            id:4,
+            name:'decoracion',
+        }, 
+
     ])
   return (
     <div>
+        
         {nvList.map((listaFiltrada)=>{
                 return <>
-                
                 <ListadoN key={listaFiltrada.id} name = {listaFiltrada.name} />
-                    <ListadoN key={listaFiltrada.id} productos={listaFiltrada.productos}/>
-                 
-                </>
-            
-        })}
+                </>   
+        })} 
     </div>
   )
 }

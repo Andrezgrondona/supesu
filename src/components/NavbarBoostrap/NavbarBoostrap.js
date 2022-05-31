@@ -41,7 +41,7 @@ export default function NavbarBoostrap ({props}) {
               <Nav.Link>
                 <NavLink to="/category/2">
 
-                   <NavBarList/>
+                   <NavBarList />
 
                 </NavLink>
               </Nav.Link>

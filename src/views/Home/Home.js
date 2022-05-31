@@ -3,10 +3,13 @@ import NavbarBoostrap from "../../components/NavbarBoostrap/NavbarBoostrap";
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
 import{Container, Col, Row, Alert, Button, Form, Nav} from 'react-bootstrap'
 import { Link, NavLink } from "react-router-dom"
+import DisneyApi from '../../components/DisneyApi/DisneyApi';
 
 
 import banner from '../../assets/images/baner4.jpeg'
 import baby from '../../assets/images/bebes.jpeg'
+import Item from '../../components/Item/Item';
+
 
 function Home() {
   return (
@@ -14,6 +17,7 @@ function Home() {
      
 
       <Container>
+        
         <div>
         <img className='bannerUno' src={banner}/>
         </div>
@@ -67,6 +71,8 @@ function Home() {
 
 
       <ItemListContainer /> 
+
+      <DisneyApi/>
         
     </div>
   )
