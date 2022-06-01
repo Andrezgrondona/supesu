@@ -1,4 +1,39 @@
 
+import React from 'react'
+import { useEffect, useState } from 'react';
+import { Card, Button } from 'react-bootstrap';
+
+
+export default function DisneyApi() {
+    const [lista, setLista] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    // esta funcion en otro archivo
+  
+    function getDisney(params) {
+      return fetch(`https://api.disneyapi.dev/${params}`);
+    }
+  
+    useEffect(() => {
+      getDisney('characters')
+        .then((promise) => {
+          return promise.json();
+        })
+        .then((res) => setLista(res.data))
+        .catch((err) => console.log(err))
+        .finally(() => setIsLoading(!isLoading));
+    }, []);
+  
+    return (
+
+      <ul>
+        {isLoading
+          ? 'Cargando...'
+          : lista.map((char) => <div key={char._id}>{char.name}</div>
+          )}
+      </ul>
+    );
+  }
+ 
 /* ------------------------------- prueba 1 ------------------------------ */
 /* import React, { useEffect, useState } from 'react'
 
@@ -31,7 +66,7 @@ export default DisneyApi */
 
 /* -------------------------------- prueba 2 -------------------------------- */
 
-import React from "react";
+/* import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -49,17 +84,13 @@ export const DisneyApi = () => {
   return (
     <div>
     prueba a imprimir
-    {/* <ul>
-        {disney.map(item=>(
-            <li key={item.id}>{item.name}</li>
-        ))}
-    </ul>  */}
+   
 </div>
   )
 }
 
 export default DisneyApi; 
-
+ */
 /* -------------------------------- prueba 2 -------------------------------- */
 /* -------------------------------- prueba 3-------------------------------- */
 

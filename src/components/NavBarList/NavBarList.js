@@ -30,7 +30,7 @@ const NavBarList = () => {
 
     ])
   return (
-    <div>
+    <>
         
         {nvList.map((listaFiltrada)=>{
                 return <>
@@ -41,7 +41,7 @@ const NavBarList = () => {
                     </Nav.Link>
                 </>   
         })} 
-    </div>
+    </>
   )
 }
 
