@@ -8,7 +8,7 @@ import { CartContext } from "../../context/CartContext";
 
 
 export default function CartWidget() {
-  const { cart } = React.useContext(CartContext);
+  const { countItems, cart } = React.useContext(CartContext);
   return (
     <div className="CartWidget">
       <Link to="/cart">
@@ -16,6 +16,7 @@ export default function CartWidget() {
         <span className="badge">
           {cart.length}
         </span>
+        
       </Link>
     </div>
   );

@@ -1,7 +1,7 @@
-/* import ListadoN from "../ListadoN/ListadoN";
+/*  import ListadoN from "../ListadoN/ListadoN";
 import NavBarList from "../NavBarList/NavBarList";
 
-import CartIcon from "../Carticon/CartIcon"
+import CartIcon from "../CartIcon/CartIcon";
 import {Navbar, Container, Nav} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom"
 
@@ -31,10 +31,10 @@ export default function NavbarBoostrap ({props}) {
     </header>
   );
 }
- */
+  */
 /* -------------------------------- prueba 1 -------------------------------- */
 
- import ListadoN from "../ListadoN/ListadoN";
+  import ListadoN from "../ListadoN/ListadoN";
 import NavBarList from "../NavBarList/NavBarList";
 
 import CartIcon from "../CartIcon/CartIcon"
@@ -77,7 +77,7 @@ export default function NavbarBoostrap ({props}) {
               <Nav.Link>
                 <NavLink to="/category/2">
 
-                    <NavBarList /> 
+                   {/*  <NavBarList />  */}
 
                 </NavLink>
               </Nav.Link>
@@ -88,5 +88,5 @@ export default function NavbarBoostrap ({props}) {
       </Navbar>
     </header>
   );
-} 
+}  
 
