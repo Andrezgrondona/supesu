@@ -51,13 +51,13 @@ function Cart() {
                                 <Row>
                                 <Card >
                                     <Row>
-                                        <Col md={{ span: 3 }}>
+                                        <Col md={{ span: 2 }}>
                                             <Card.Img variant="top" src={cartItem.image}/>
                                         </Col>
-                                        <Col md={{ span: 3 }}>
+                                        <Col md={{ span: 2}}>
                                             <p>{cartItem.title}</p>
                                         </Col>
-                                        <Col md={{ span: 3 }}>
+                                        <Col md={{ span: 2 }}>
                                             <p>Cantidad:</p>
                                             <p>{cartItem.quantity}</p>                                                        
                                         </Col>
