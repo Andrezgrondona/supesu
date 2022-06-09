@@ -11,7 +11,7 @@ export default function ItemDetailContainer ({ title, productId }) {
   const [item, setItem] = React.useState({});
   React.useEffect(() => {
     const db = getFirestore();
-    // 1. ejemplo llamar a un documento
+    // llamar a un documento
     const productRef= doc(db, "productos", productId)
     getDoc(productRef).then(snapshot => {
       if(snapshot.exists()) {

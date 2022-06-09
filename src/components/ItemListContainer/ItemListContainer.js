@@ -14,43 +14,26 @@ export default function ItemListContainer ({title, categoryId}) {
     const db = getFirestore();
 
     if(categoryId) {
-      // 3. ejemplo llamar a una coleccion con filtros
+      // llamar a una coleccion con filtros
       const q = query(collection(db, "productos"), where("category_id", "==", categoryId))
       getDocs(q).then(snapshot => {
         if(snapshot.size ===0) {
           console.log("No hay productos")
         }
         setItems (snapshot.docs.map(doc =>  ({id: doc.id, ...doc.data()})));
-  
       })
       } else{
-        // 2. ejemplo llamar coleccion de productos
 
-    const productsRef = collection(db, "productos");
-    getDocs(productsRef).then(snapshot => {
-      if(snapshot.size ===0) {
+        
+        // llamar coleccion de productos
+      const productsRef = collection(db, "productos");
+      getDocs(productsRef).then(snapshot => {
+        if(snapshot.size ===0) {
         console.log("No hay productos")
       }
       setItems (snapshot.docs.map(doc =>  ({id: doc.id, ...doc.data()})));
-
     })
       }
-
-
-
-    // 1. ejemplo llamar a un documento
-    const productRef= doc(db, "productos", "33Mw5z3ZplaKQbiOjtB0")
-    getDoc(productRef).then(snapshot => {
-      if(snapshot.exists()) {
-        console.log(snapshot.data()) 
-      }
-    })
-
-    
-
-
-    
-
   }, [categoryId])
 
   return (
