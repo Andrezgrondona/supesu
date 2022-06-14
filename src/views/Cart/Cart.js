@@ -4,6 +4,7 @@ import React from 'react'
 import {CartContext} from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 import {Alert, Col,Card,Button,Row,Container} from 'react-bootstrap'
+import Checkout from '../Checkout/Checkout'
 
 function Cart() {
   const {cart} = React.useContext(CartContext)
@@ -40,8 +41,7 @@ function Cart() {
             <>
                                         
                 <Container>
-                <h1 className='titulo_cart'>Tienes {countItems()} elementos en tu carrito</h1>
-
+                    <h1 className='titulo_cart'>Tienes {countItems()} elementos en tu carrito</h1>
                 </Container>
                 
                 <Container>
@@ -82,9 +82,13 @@ function Cart() {
                         <Button variant="secondary" onClick={ ()=>deleteAll()} >Limpiar Carrito </Button>
                     </Col>
                     <Col md={{ span: 4 }}>
-                        <Button variant="success" >Ir a pagar </Button>
+                        <Link to={`/checkout`} >
+                            <Button variant="success" >Ir a pagar </Button>
+                        </Link>
                     </Col>
-                </Row>                        
+                </Row> 
+
+                                       
             </>                
         )
          }

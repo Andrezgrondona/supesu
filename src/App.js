@@ -9,6 +9,7 @@ import styles from "../src/styles/styles.css"
 /* --------------------------------- Context -------------------------------- */
 import{CartProvider} from "./context/CartContext"
 import NavbarBoostrap from "./components/NavbarBoostrap/NavbarBoostrap"
+import Checkout from "./views/Checkout/Checkout"
 /* --------------------------------- Context -------------------------------- */
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/product/:productId" element={<Product />} />
           <Route exact path="/category/:categoryId" element={<Category />} />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/checkout" element={<Checkout/>} />
         </Routes>
       </CartProvider>
       </BrowserRouter>
