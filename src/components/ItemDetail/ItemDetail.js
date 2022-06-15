@@ -30,6 +30,7 @@ export default function ItemDetail ({item}) {
             setCount={setCount}
             stock={item.stock}
           />
+          
         )}
       </Card.Body>
     </Card>
