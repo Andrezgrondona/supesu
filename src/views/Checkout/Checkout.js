@@ -98,13 +98,6 @@ function Checkout() {
                     })}
 
                 </Container>
-    
-
-
-
-
-
-
     </>
   )
 }
