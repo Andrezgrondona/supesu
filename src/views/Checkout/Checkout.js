@@ -1,9 +1,13 @@
 import React from 'react'
 import {doc, updateDoc, addDoc, collection, getFirestore } from "firebase/firestore"
+import {CartContext} from '../../context/CartContext'
+import {Alert, Col,Card,Button,Row,Container} from 'react-bootstrap'
 
 import Cart from '../Cart/Cart'
 
 function Checkout() {
+    const {cart} = React.useContext(CartContext)
+    const {removeFromCart} = React.useContext(CartContext)
     const [data, setData] = React.useState([])
     const [orderId, setOrderId] = React.useState()
     const handleChange=(event) =>{
@@ -11,24 +15,10 @@ function Checkout() {
         setData({...data, [name]:value})
     }
 
-    const cart =[
-        {
-            id:1,
-            title:"Product 1",
-            price:10,
-            quantity:1
-        },
-        {
-            id:2,
-            title:"Product 2",
-            price:20,
-            quantity:2
-        },
-    ]
-
+   
     const handleSubmit=(event) =>{
         event.preventDefault()  
-        const order = {
+            const order = {
             buyer:data,
             items:cart
         }
@@ -46,6 +36,7 @@ function Checkout() {
 
   
   return (
+  <>
   
   <div className='form'>
         <form onSubmit={handleSubmit}>
@@ -77,6 +68,44 @@ function Checkout() {
             />
         </form>
     </div>
+
+
+    <Container>
+                    {cart.map((cartItem) => {
+                        return(
+                            <>
+                                <Row>
+                                <Card >
+                                    <Row>
+                                        <Col md={{ span: 2 }}>
+                                            <Card.Img variant="top" src={cartItem.image}/>
+                                        </Col>
+                                        <Col md={{ span: 2}}>
+                                            <p>{cartItem.title}</p>
+                                        </Col>
+                                        <Col md={{ span: 2 }}>
+                                            <p>Cantidad:</p>
+                                            <p>{cartItem.quantity}</p>                                                        
+                                        </Col>
+                                        <Col md={{ span: 3 }}>
+                                            <Button variant="primary" onClick={ ()=>removeFromCart(cartItem.id)}>Eliminar del carrito </Button>                                                
+                                        </Col>
+                                    </Row>                                            
+                                </Card>
+                                </Row>                                        
+                            </>
+                        )                
+                    })}
+
+                </Container>
+    
+
+
+
+
+
+
+    </>
   )
 }
 

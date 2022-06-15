@@ -7,15 +7,14 @@ import { CartContext } from "../../context/CartContext";
 
 
 
-export default function CartWidget() {
+export default function CartWidget({count}) {
   const { countItems, cart } = React.useContext(CartContext);
   return (
     <div className="CartWidget">
       <Link to="/cart">
         <FontAwesomeIcon icon={faCartShopping} />
-        <span className="badge">
-          {cart.length}
-        </span>
+        <span className="badge">{cart.length}</span>
+        <span>{(countItems() > 0)?countItems():'-'}</span>
         
       </Link>
     </div>

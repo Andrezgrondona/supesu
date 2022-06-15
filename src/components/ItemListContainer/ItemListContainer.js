@@ -50,7 +50,7 @@ export default function ItemListContainer ({title, categoryId}) {
      
     </Container>
   );
-}
+} 
 /* -------------------------------- FIREBASE -------------------------------- */
 
 /* -------------------- IMPORTAR PRODUCTOS MANERA NORMAL -------------------- */
@@ -83,6 +83,6 @@ export default function ItemListContainer ({title, categoryId}) {
      
     </Container>
   );
-} */
+}  */
 
 /* -------------------- IMPORTAR PRODUCTOS MANERA NORMAL -------------------- */

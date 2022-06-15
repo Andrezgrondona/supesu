@@ -10,7 +10,7 @@ export default function Product ({}) {
       <Row>
         <Col>
           
-          <ItemDetailContainer title="Mi producto" productId={productId}/>
+          <ItemDetailContainer title="Detalle del producto" productId={productId}/>
         </Col>
       </Row>
     </Container>

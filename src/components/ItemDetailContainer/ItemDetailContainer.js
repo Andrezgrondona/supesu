@@ -2,7 +2,7 @@
 
 /* -------------------------------- FIREBASE -------------------------------- */
 
-import {Container, Row, Col} from "react-bootstrap"
+ import {Container, Row, Col} from "react-bootstrap"
 import React from "react";
 import { Article } from "../../data/Productos";
 import ItemDetail from "../ItemDetail/ItemDetail";
@@ -32,11 +32,11 @@ export default function ItemDetailContainer ({ title, productId }) {
       </Row>
     </Container>
   );
-}
+} 
 /* -------------------------------- FIREBASE -------------------------------- */
 /* ----------------------------- DETALLE NORMAL ----------------------------- */
 
-/* import {Container, Row, Col} from "react-bootstrap"
+ /* import {Container, Row, Col} from "react-bootstrap"
 import React from "react";
 import { Article } from "../../data/Productos";
 import ItemDetail from "../ItemDetail/ItemDetail";
@@ -57,6 +57,6 @@ export default function ItemDetailContainer ({ title, productId }) {
       </Row>
     </Container>
   );
-} */
+}  
 /* ----------------------------- DETALLE NORMAL ----------------------------- */
 

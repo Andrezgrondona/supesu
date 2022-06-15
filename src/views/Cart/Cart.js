@@ -12,6 +12,8 @@ function Cart() {
   const {deleteAll} = React.useContext(CartContext)
   const {addToCart} = React.useContext(CartContext)
   const {countItems} = React.useContext(CartContext)
+
+  
   return (
     <>
 
