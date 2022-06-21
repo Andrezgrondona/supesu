@@ -10,6 +10,9 @@ Para que la App funcione correctamente  se debera utilizar el npm
 npm install
 ```
 
+## Vercel
+https://supesu.vercel.app/
+
 ## Instalacion de Dependencias
 Una vez instaladas las dependencias se debera correr la App con: 
 
