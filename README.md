@@ -2,6 +2,9 @@
 
 E-commerce creado para la entrega final de CODERHOUSE
 
+## Proceso guia de usuario
+https://media.giphy.com/media/b8c49DHHLKayPtayI5/giphy.gif
+
 ## Instalacion
 
 Para que la App funcione correctamente  se debera utilizar el npm 
