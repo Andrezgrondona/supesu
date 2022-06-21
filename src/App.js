@@ -5,6 +5,7 @@ import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
 import styles from "../src/styles/styles.css"
+import CompletedOrder from "./views/CompletedOrder/CompletedOrder"
 
 
 /* --------------------------------- Context -------------------------------- */
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/category/:categoryId" element={<Category />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/checkout" element={<Checkout/>} />
+          <Route exact path="/CompleteOrder" element={<CompletedOrder/>} />
         </Routes>
       </CartProvider>
       </BrowserRouter>

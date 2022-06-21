@@ -1,7 +1,6 @@
 
 import {Navbar, Container, Nav} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-
 import CarritoIcono from "../CarritoIcono/CarritoIcono"
 
 

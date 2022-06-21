@@ -1,8 +1,11 @@
 import React from 'react'
-import {doc, updateDoc, addDoc, collection, getFirestore } from "firebase/firestore"
+import {doc, updateDoc, addDoc, collection, getFirestore, Timestamp } from "firebase/firestore"
 import {CartContext} from '../../context/CartContext'
 import {Alert, Col,Card,Button,Row,Container} from 'react-bootstrap'
 import Cart from '../Cart/Cart'
+import { Link } from 'react-router-dom'
+import CompletedOrder from '../CompletedOrder/CompletedOrder'
+
 
 
 function Checkout() {
@@ -15,12 +18,17 @@ function Checkout() {
         setData({...data, [name]:value})
     }
 
+    const {deleteAll} = React.useContext(CartContext)
+
    
     const handleSubmit=(event) =>{
         event.preventDefault()  
             const order = {
             buyer:data,
-            items:cart
+            items:cart,
+            status:"Generada",
+            date:Timestamp.fromDate( new Date)
+           
         }
         const db = getFirestore()
         const orderCollection = collection(db, "orders")
@@ -28,7 +36,8 @@ function Checkout() {
           addDoc (orderCollection, order).then(({id})=>{
             setOrderId(id)
              /* alert(id)  */
-             alert("Tu pedido se ha realizado con éxito, tu numero de confirmacion es"+" "+id)
+             /* alert("Tu orden es"+" "+id +""+"Dale click al boton Finalizar...Gracias" ) */
+             alert("Tu orden se ha generado correcctamente, Dale click en Finalizar para terminar tu compra"   )
 
            /*  const productDoc = doc(db, "productos", "MDA73Xy1i0eMewvYB3tS")
             updateDoc(productDoc, {stock:6}) */
@@ -40,6 +49,7 @@ function Checkout() {
   <>
   
 <Container>
+  
      <div class="mainscreen">
       <div class="card2">
         <div class="fondoForm">
@@ -53,7 +63,10 @@ function Checkout() {
             <input type="text" class="inputbox" name="Apellido" onChange={handleChange} required />
 
             <p>E-mail</p>
-            <input type="text" class="inputbox" name="E-mail" onChange={handleChange} required />
+            <input type="text" class="inputbox" name="mail" onChange={handleChange} required />
+
+            <p>Confirmar E-mail</p>
+            <input type="text" class="inputbox" name="mail" onChange={handleChange} required />
 
             <p>Celular</p>
             <input type="text" class="inputbox" name="Celular" onChange={handleChange} required />
@@ -70,8 +83,17 @@ function Checkout() {
               <option value="ContraEntrega" >Contra Entrega</option>
             </select>
 
-            <p></p>
-            <button type="submit" class="button">CheckOut</button>
+              <button type="submit" class="button">CheckOut</button>
+           
+            <div>
+                <CompletedOrder orderId={orderId} data={data}/>
+
+                <Link to="/Home" >
+                  
+                 {/* <Button variant="success" >Finalizar</Button> */}
+                 <Button variant="success" onClick={ ()=>deleteAll()} >Finalizar</Button>
+                </Link>
+            </div>
           </form>
         </div>
       </div>

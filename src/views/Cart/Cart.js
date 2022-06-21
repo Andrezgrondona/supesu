@@ -91,7 +91,8 @@ function Cart() {
                             </Col>
                             <Col md={{ span: 4 }}>
                                 <Link to="/checkout" >
-                                    <Button variant="success" >Ir a pagar </Button>
+                                
+                                    <Button variant="success" >Ir a pagar </Button> 
                                 </Link>
                             </Col>
                         </Row>                        
