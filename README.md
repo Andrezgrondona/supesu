@@ -4,7 +4,7 @@ E-commerce creado para la entrega final de CODERHOUSE
 
 ## Instalacion
 
-Para que la App funcione correctamente  se debera utulizar el npm 
+Para que la App funcione correctamente  se debera utilizar el npm 
 
 ```bash
 npm install
