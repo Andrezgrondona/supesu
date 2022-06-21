@@ -3,7 +3,8 @@
 E-commerce creado para la entrega final de CODERHOUSE
 
 ## Proceso guia de usuario
-https://media.giphy.com/media/b8c49DHHLKayPtayI5/giphy.gif
+![giphy](https://user-images.githubusercontent.com/95435665/174896997-3a35a8b6-8c94-4244-868a-9ae4ce899146.gif)
+
 
 ## Instalacion
 
