@@ -25,3 +25,6 @@ Las librerias utilizadas en este proyecto son:
 Boostrap
 FontAwesome
 Firestore
+Con estas el proyecto tiene una mejor visual para la interaccion con el usuario
+##
+
