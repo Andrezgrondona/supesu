@@ -9,8 +9,10 @@ export default function Product ({}) {
     <Container>
       <Row>
         <Col>
-          
-          <ItemDetailContainer title="Detalle del producto" productId={productId}/>
+          <Container>
+            <div className="txt_det">Detalle de Producto</div>
+          </Container>
+          <ItemDetailContainer title ="" productId={productId}/>
         </Col>
       </Row>
     </Container>

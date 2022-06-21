@@ -66,8 +66,21 @@ const CartProvider = ({children}) => {
     return carQuantity
   }
 /* -------------------------------- contador -------------------------------- */
+
+const getCartTotal = () =>{
+  let cartTotal = 0
+  cart.map( (cartItem) => {
+      (
+          cartTotal = cartTotal + (cartItem.quantity*cartItem.price)
+      )      
+  }
+  )
+  return cartTotal
+}
+
   return (
     <Provider value={{
+      getCartTotal,
       countItems,
       addToCart,
       removeFromCart,

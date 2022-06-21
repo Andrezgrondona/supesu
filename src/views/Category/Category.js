@@ -7,9 +7,7 @@ function Category() {
   const {categoryId}=useParams()
   console.log(categoryId)
   return (
-    <div>
-        
-        <h1>LIstado category</h1>
+    <div>  
         <ItemListContainer categoryId={categoryId}/>
     </div>
   )

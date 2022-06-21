@@ -2,8 +2,8 @@ import React from 'react'
 import {doc, updateDoc, addDoc, collection, getFirestore } from "firebase/firestore"
 import {CartContext} from '../../context/CartContext'
 import {Alert, Col,Card,Button,Row,Container} from 'react-bootstrap'
-
 import Cart from '../Cart/Cart'
+
 
 function Checkout() {
     const {cart} = React.useContext(CartContext)
@@ -27,10 +27,11 @@ function Checkout() {
         const productsCollection = collection(db, "productos")
           addDoc (orderCollection, order).then(({id})=>{
             setOrderId(id)
-            /* alert(id) */
+             /* alert(id)  */
+             alert("Tu pedido se ha realizado con éxito, tu numero de confirmacion es"+" "+id)
 
-            const productDoc = doc(db, "productos", "MDA73Xy1i0eMewvYB3tS")
-            updateDoc(productDoc, {stock:6})
+           /*  const productDoc = doc(db, "productos", "MDA73Xy1i0eMewvYB3tS")
+            updateDoc(productDoc, {stock:6}) */
         })
     }
 
@@ -38,73 +39,44 @@ function Checkout() {
   return (
   <>
   
-  <div className='form'>
-        <form onSubmit={handleSubmit}>
-            <h1>Checkout</h1>
-            <input
-                type="text"
-                name="name"
-                place="name"
-                onChange={handleChange}
-            />
+<Container>
+     <div class="mainscreen">
+      <div class="card2">
+        <div class="fondoForm">
+          <form onSubmit={handleSubmit}>
+            <h1>CheckOut</h1>
+            <h2>Informacion de pago</h2>
+            <p>Nombre</p>
+            <input type="text" class="inputbox" name="name" onChange={handleChange} required />
 
-            <input
-                type="email"
-                name="email"
-                place="Email"
-                onChange={handleChange}
-            />
+            <p>Apellido</p>
+            <input type="text" class="inputbox" name="Apellido" onChange={handleChange} required />
 
-            <input
-                type="phone"
-                name="phone"
-                place="phone"
-                onChange={handleChange}
-            />
+            <p>E-mail</p>
+            <input type="text" class="inputbox" name="E-mail" onChange={handleChange} required />
 
-            <input
-                type="submit"
-                value="enviar"
-            />
-        </form>
+            <p>Celular</p>
+            <input type="text" class="inputbox" name="Celular" onChange={handleChange} required />
+
+            <p>Drireccion</p>
+            <input type="text" class="inputbox" name="Direccion" onChange={handleChange} required />
+           
+
+            <p>Tipo de pago</p>
+            <select class="inputbox" name="Tipo de Pago" id="card_type" onChange={handleChange} required>
+              <option value="">--Selecciona una opcion--</option>
+              <option value="Efectivo" >Efectivo</option>
+              <option value="PSE" >PSE</option>
+              <option value="ContraEntrega" >Contra Entrega</option>
+            </select>
+
+            <p></p>
+            <button type="submit" class="button">CheckOut</button>
+          </form>
+        </div>
+      </div>
     </div>
-
-
-    <Container>
-                    {cart.map((cartItem) => {
-                        return(
-                            <>
-                                <Row>
-                                <Card >
-                                    <Row>
-                                        <Col md={{ span: 2 }}>
-                                            <Card.Img variant="top" src={cartItem.image}/>
-                                        </Col>
-                                        <Col md={{ span: 2}}>
-                                            <p>{cartItem.title}</p>
-                                        </Col>
-                                        <Col md={{ span: 2 }}>
-                                            <p>Cantidad:</p>
-                                            <p>{cartItem.quantity}</p>                                                        
-                                        </Col>
-                                        <Col md={{ span: 3 }}>
-                                            <Button variant="primary" onClick={ ()=>removeFromCart(cartItem.id)}>Eliminar del carrito </Button>                                                
-                                        </Col>
-                                    </Row>                                            
-                                </Card>
-                                </Row>                                        
-                            </>
-                        )                
-                    })}
-
-                </Container>
-    
-
-
-
-
-
-
+    </Container>
     </>
   )
 }

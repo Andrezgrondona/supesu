@@ -6,12 +6,12 @@ import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
 import styles from "../src/styles/styles.css"
 
+
 /* --------------------------------- Context -------------------------------- */
 import{CartProvider} from "./context/CartContext"
 import NavbarBoostrap from "./components/NavbarBoostrap/NavbarBoostrap"
 import Checkout from "./views/Checkout/Checkout"
 /* --------------------------------- Context -------------------------------- */
-
 
 function App() {
   return (

@@ -3,7 +3,7 @@ import NavbarBoostrap from "../../components/NavbarBoostrap/NavbarBoostrap";
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
 import{Container, Col, Row, Alert, Button, Form, Nav} from 'react-bootstrap'
 import { Link, NavLink } from "react-router-dom"
-import DisneyApi from '../../components/DisneyApi/DisneyApi';
+
 
 
 import banner from '../../assets/images/baner4.jpeg'
@@ -26,7 +26,7 @@ function Home() {
      
       <Container>
         <div className='txt_succes'>
-          <p >Artículos destacados de la tienda</p>
+          <p  className='fraseUno'>Tendencias en decoracion</p>
           <hr />
         </div>
       </Container>   
@@ -52,30 +52,21 @@ function Home() {
       </Container> 
 
       
-      
-
-
-
       <Container>
-          <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Suscribete para recibir promociones</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-              
-                <Button variant="primary" type="submit">
-                Enviar
-              </Button>
-              </Form.Group>
-      </Form>
+          
+        <div className='frase'>
+              El gran diseño es una relación multidimensional entre la vida humana y el entorno. — Naoto Fukasawa
+        </div>
+     
       </Container>
-
-
       <ItemListContainer /> 
 
-      <DisneyApi/>
+  
         
     </div>
   )
 }
 
 export default Home
+ 
+

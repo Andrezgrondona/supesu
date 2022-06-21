@@ -1,7 +1,4 @@
 
-
-/* -------------------------------- FIREBASE -------------------------------- */
-
  import {Container, Row, Col} from "react-bootstrap"
 import React from "react";
 import { Article } from "../../data/Productos";
@@ -34,29 +31,3 @@ export default function ItemDetailContainer ({ title, productId }) {
   );
 } 
 /* -------------------------------- FIREBASE -------------------------------- */
-/* ----------------------------- DETALLE NORMAL ----------------------------- */
-
- /* import {Container, Row, Col} from "react-bootstrap"
-import React from "react";
-import { Article } from "../../data/Productos";
-import ItemDetail from "../ItemDetail/ItemDetail";
-export default function ItemDetailContainer ({ title, productId }) {
-  const [item, setItem] = React.useState({});
-  React.useEffect(() => {
-    setItem(Article.find(item => item.id === productId));
-  }, [productId]);
-  return (
-    <Container className="itemlist-container">
-      <Row>
-        <Col>
-          <h1>{title}</h1>
-        </Col>
-      </Row>
-      <Row>
-        <ItemDetail item={item} />
-      </Row>
-    </Container>
-  );
-}  
-/* ----------------------------- DETALLE NORMAL ----------------------------- */
-

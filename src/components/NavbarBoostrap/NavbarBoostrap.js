@@ -1,46 +1,7 @@
-/*  import ListadoN from "../ListadoN/ListadoN";
-import NavBarList from "../NavBarList/NavBarList";
 
-import CartIcon from "../CartIcon/CartIcon";
 import {Navbar, Container, Nav} from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom"
-
-
-
-export default function NavbarBoostrap ({props}) {
-  return (
-    <header>
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand>
-            <Link to="/" >Supēsu</Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-
-              
-                <NavBarList />
-              
-
-            </Nav>
-          </Navbar.Collapse>
-          <CartIcon /> 
-        </Container>
-      </Navbar>
-    </header>
-  );
-}
-  */
-/* -------------------------------- prueba 1 -------------------------------- */
-
-  import ListadoN from "../ListadoN/ListadoN";
-import NavBarList from "../NavBarList/NavBarList";
-
+import { Link, NavLink } from "react-router-dom";
 import CartIcon from "../CartIcon/CartIcon"
-import {Navbar, Container, Nav} from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom"
-
 
 
 export default function NavbarBoostrap ({props}) {

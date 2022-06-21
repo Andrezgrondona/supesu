@@ -26,9 +26,9 @@ export default function AddButton({count, setCount, stock, onSubmit}) {
 
   return (
     <div className="add-button-container">
-      <StockButton text="-" handleOnClick={onDecrease}/>
-      <span className="add-button-count">{count}</span>
       <StockButton text="+" handleOnClick={onAdd}/>
+      <span className="add-button-count">{count}</span>
+      <StockButton text="-" handleOnClick={onDecrease}/>
       <AddButton handleOnSubmit={onSubmit} />
     </div>
   );
