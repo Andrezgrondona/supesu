@@ -1,7 +1,8 @@
 
 import {Navbar, Container, Nav} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import CartIcon from "../CartIcon/CartIcon"
+import CartIcon from "../CartIcon/Carticon"
+
 
 
 export default function NavbarBoostrap ({props}) {
