@@ -1,8 +1,8 @@
 
 import {Navbar, Container, Nav} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import CartIcon from "../CartIcon/Carticon"
 
+import CarritoIcono from "../CarritoIcono/CarritoIcono"
 
 
 export default function NavbarBoostrap ({props}) {
@@ -45,7 +45,7 @@ export default function NavbarBoostrap ({props}) {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          <CartIcon /> 
+          <CarritoIcono /> 
         </Container>
       </Navbar>
     </header>

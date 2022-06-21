@@ -14,9 +14,7 @@ export default function CartWidget({count}) {
         <FontAwesomeIcon icon={faCartShopping} />
         {/* <span className="badge">{cart.length}</span> */}
         <span className="cart_count">{(countItems() > 0)?countItems():'-'}</span>
-        
       </Link>
     </div>
   );
 }
-
