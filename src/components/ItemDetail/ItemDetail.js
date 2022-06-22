@@ -1,9 +1,8 @@
 
 import React from "react"
-import {Container, Row, Col, Card, Button} from "react-bootstrap"
+import {Container} from "react-bootstrap"
 import AddButton from "../AddButton/AddButton";
 import { CartContext } from "../../context/CartContext";
-import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom'
 
 export default function ItemDetail ({item}) {

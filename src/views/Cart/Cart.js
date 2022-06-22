@@ -4,8 +4,6 @@ import React from 'react'
 import {CartContext} from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 import {Alert, Col,Card,Button,Row,Container} from 'react-bootstrap'
-import Checkout from '../Checkout/Checkout'
-
 import NumberFormat from 'react-number-format'
 
 function Cart() {

@@ -4,7 +4,6 @@ import Cart from "./views/Cart/Cart"
 import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
-import styles from "../src/styles/styles.css"
 import CompletedOrder from "./views/CompletedOrder/CompletedOrder"
 
 

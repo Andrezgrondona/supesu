@@ -1,7 +1,7 @@
 
- import {Container, Row, Col} from "react-bootstrap"
+/* import { Article } from "../../data/Productos"; */
+import {Container, Row, Col} from "react-bootstrap"
 import React from "react";
-import { Article } from "../../data/Productos";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 export default function ItemDetailContainer ({ title, productId }) {

@@ -5,9 +5,8 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
-
 export default function CartWidget({count}) {
-  const { countItems, cart } = React.useContext(CartContext);
+  const { countItems, /* cart */ } = React.useContext(CartContext);
   return (
     <div className="CartWidget">
       <Link to="/cart">
