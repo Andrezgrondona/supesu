@@ -5,7 +5,7 @@ import{useParams} from 'react-router-dom'
 
 function Category() {
   const {categoryId}=useParams()
-  console.log(categoryId)
+  /* console.log(categoryId) */
   return (
     <div>  
         <ItemListContainer categoryId={categoryId}/>

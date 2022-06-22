@@ -1,10 +1,10 @@
 
-
 import React from "react"
-import {Container, Row, Col, Card} from "react-bootstrap"
+import {Container, Row, Col, Card, Button} from "react-bootstrap"
 import AddButton from "../AddButton/AddButton";
 import { CartContext } from "../../context/CartContext";
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom'
 
 export default function ItemDetail ({item}) {
               
@@ -27,17 +27,21 @@ export default function ItemDetail ({item}) {
 
         <div className="product-price-btn">
           <div className="product-text">
-            
-            <AddButton
-            count={count}
-            onSubmit={() => addToCart(item, count)}
-            setCount={setCount}
-            stock={item.stock}
-            />
-        </div>
-
+              {isInCart(item.id) ? (
+                <Link to={`/cart`} >
+                  <button>Ir al carrito </button>
+                </Link> 
+            ) : (
+              <AddButton
+                onSubmit={() => addToCart(item, count)}
+                count={count}
+                setCount={setCount}
+                stock={item.stock}
+              />
+            )}
+          </div>
         </div> 
-        </div> 
+      </div> 
   </div>  
 </Container>
   </>

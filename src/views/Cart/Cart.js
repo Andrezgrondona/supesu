@@ -34,7 +34,7 @@ function Cart() {
                 </>):
                 (
                     <>
-                        <h1 className='txt_item_card'>Tienes {countItems()} elementos en tu carrito</h1>                        
+                        <h1 className='txt_item_card'>Tienes {countItems()} Elementos en tu carrito</h1>                        
                         <Container>
                             {cart.map((cartItem) => {
                                 return(
@@ -62,7 +62,7 @@ function Cart() {
                                                    
                                                 </Col>
                                                 <Col md={{ span: 3 }}>
-                                                    <Button className='btnRemove' variant="primary" onClick={ ()=>removeFromCart(cartItem.id)}>Eliminar del carrito </Button>                                                
+                                                    <Button className='btnRemove' variant="primary" onClick={ ()=>removeFromCart(cartItem.id)}>Eliminar del Carrito </Button>                                                
                                                 </Col>
                                             </Row>                                            
                                         </Card>
@@ -103,7 +103,6 @@ function Cart() {
 </>
   )
 }
-
 export default Cart
 
 

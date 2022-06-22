@@ -43,8 +43,6 @@ function Checkout() {
             updateDoc(productDoc, {stock:6}) */
         })
     }
-
-  
   return (
   <>
   
@@ -87,9 +85,7 @@ function Checkout() {
            
             <div>
                 <CompletedOrder orderId={orderId} data={data}/>
-
-                <Link to="/Home" >
-                  
+                <Link to="/Home" > 
                  {/* <Button variant="success" >Finalizar</Button> */}
                  <Button variant="success" onClick={ ()=>deleteAll()} >Finalizar</Button>
                 </Link>
