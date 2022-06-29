@@ -46,13 +46,29 @@ function Checkout() {
   return (
   <>
   
+
+  {/* {isInCart(item.id) ? (
+                <Link to={`/cart`} >
+                  <button>Ir al carrito </button>
+                </Link> 
+            ) : (
+              <AddButton
+                onSubmit={() => addToCart(item, count)}
+                count={count}
+                setCount={setCount}
+                stock={item.stock}
+              />
+            )}
+  */}
+
+
 <Container>
   
      <div class="mainscreen">
       <div class="card2">
         <div class="fondoForm">
           <form onSubmit={handleSubmit}>
-            <h1>CheckOut</h1>
+          <h1>CheckOut</h1>
             <h2>Informacion de pago</h2>
             <p>Nombre</p>
             <input type="text" class="inputbox" name="name" onChange={handleChange} required />
