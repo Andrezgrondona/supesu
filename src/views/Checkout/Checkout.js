@@ -9,10 +9,15 @@ import CompletedOrder from '../CompletedOrder/CompletedOrder'
 
 
 function Checkout() {
+  const handleClick = () => {
+    orderId(true)
+  }
+
+
     const {cart} = React.useContext(CartContext)
     const {removeFromCart} = React.useContext(CartContext)
     const [data, setData] = React.useState([])
-    const [orderId, setOrderId] = React.useState()
+    const [orderId, setOrderId] = React.useState(false)
     const handleChange=(event) =>{
         const {name, value} = event.target
         setData({...data, [name]:value})
@@ -46,34 +51,19 @@ function Checkout() {
   return (
   <>
   
-
-  {/* {isInCart(item.id) ? (
-                <Link to={`/cart`} >
-                  <button>Ir al carrito </button>
-                </Link> 
-            ) : (
-              <AddButton
-                onSubmit={() => addToCart(item, count)}
-                count={count}
-                setCount={setCount}
-                stock={item.stock}
-              />
-            )}
-  */}
-
-
 <Container>
   
      <div class="mainscreen">
       <div class="card2">
-        <div class="fondoForm">
-          <form onSubmit={handleSubmit}>
-          <h1>CheckOut</h1>
-            <h2>Informacion de pago</h2>
-            <p>Nombre</p>
+       <div class="fondoForm">
+        
+        <form onSubmit={handleSubmit}>
+         <h1>CheckOut</h1>
+         <h2>Informacion de pago</h2>
+           <p>Nombre</p>
             <input type="text" class="inputbox" name="name" onChange={handleChange} required />
 
-            <p>Apellido</p>
+          <p>Apellido</p>
             <input type="text" class="inputbox" name="Apellido" onChange={handleChange} required />
 
             <p>E-mail</p>
@@ -87,9 +77,8 @@ function Checkout() {
 
             <p>Drireccion</p>
             <input type="text" class="inputbox" name="Direccion" onChange={handleChange} required />
-           
-
-            <p>Tipo de pago</p>
+          
+            <p>Tipo de pago</p> 
             <select class="inputbox" name="Tipo de Pago" id="card_type" onChange={handleChange} required>
               <option value="">--Selecciona una opcion--</option>
               <option value="Efectivo" >Efectivo</option>
@@ -97,17 +86,18 @@ function Checkout() {
               <option value="ContraEntrega" >Contra Entrega</option>
             </select>
 
-              <button type="submit" class="button">CheckOut</button>
-           
-            <div>
+              <button type="submit" class="button">CheckOut {handleClick}
+              
+              </button> 
+          </form>
+
+          {orderId ? <div>
                 <CompletedOrder orderId={orderId} data={data}/>
                 <Link to="/Home" > 
-                 {/* <Button variant="success" >Finalizar</Button> */}
                  <Button variant="success" onClick={ ()=>deleteAll()} >Finalizar</Button>
                 </Link>
-            </div>
-          </form>
-        </div>
+          </div> : undefined}
+        </div> 
       </div>
     </div>
     </Container>
@@ -116,3 +106,4 @@ function Checkout() {
 }
 
 export default Checkout
+
